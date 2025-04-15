@@ -53,8 +53,10 @@
     <script src="{{ asset('mazer2.0/assets/js/app.js') }}"></script>
 
     <!-- Need: Apexcharts -->
-    <script src="{{ asset('mazer2.0/assets/extensions/apexcharts/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('mazer2.0/assets/js/pages/dashboard.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
 
 </body>
 
