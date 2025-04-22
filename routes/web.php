@@ -14,6 +14,8 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\SalesOrderController;
 use App\Http\Controllers\PurchaseOrderController;
+use App\Http\Controllers\ReportingController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,6 +54,9 @@ Route::group([
     ], function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
+
+
+        Route::resource('reporting', ReportingController::class);
         Route::resource('roles', RoleController::class);
         Route::resource('permissions', PermissionController::class);
         Route::resource('users', UserController::class);
@@ -66,6 +71,9 @@ Route::group([
     Route::put('/profile/{user}', [ProfileController::class, 'update'])->name('profile.update');
     Route::put('/profile/{user}/update-password', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 });
+
+Route::get('/products/report', [ReportingController::class, 'report'])->name('products.report');
+
 
 Route::resource('products', ProductController::class);
 Route::resource('customers', CustomerController::class);

@@ -55,6 +55,12 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+            <li class="sidebar-item @if (Route::currentRouteName() == 'admin.reporting.index') active @endif">
+                <a href="{{ route('admin.reporting.index') }}" class='sidebar-link'>
+                    <i class="fa fa-chart-bar"></i>
+                    <span>Reporting</span>
+                </a>
+            </li>
 
             <li class="sidebar-item has-sub @if (in_array(Route::currentRouteName(), ['admin.roles.index', 'admin.permissions.index', 'admin.users.index'])) active @endif">
                 <a href="#" class='sidebar-link'>
